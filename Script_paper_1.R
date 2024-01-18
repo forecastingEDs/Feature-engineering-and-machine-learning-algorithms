@@ -47,7 +47,6 @@ library(catboost)
 # Parallel processing to speed up grid search 
 doParallel::registerDoParallel(cores=20)
 parallel_stop()
-# Divisão dos conjuntos de dados em treinamento e teste.
 
 ### Load Data ----
 ### In this step you must import the data from the Excel spreadsheet to Rstudio keeping the original file name "atends_temperature_calendar" so that the next steps work correctly.
