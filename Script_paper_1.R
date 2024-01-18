@@ -1,4 +1,14 @@
-# Load the following R packages ----
+### To use the modeltime package in Rstudio it is necessary to load some Python functions (we use Rstudio loading some functions that are from Python). Run step 1.
+### step 1
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+remove.packages("modeltime", lib="~/R/win-library/4.1") # remove the package, if installed.
+install.packages("modeltime", dependencies = TRUE)
+remotes::install_github("business-science/modeltime", dependencies = TRUE)
+# Enter one or more numbers, or an empty line to skip updates: 2 # select option 2: CRAN packages only #
+
+### step 2
+### Install and load the following R packages ----
 library(recipes)
 library(tune)
 library(keras)
@@ -34,7 +44,7 @@ library(RcppParallel)
 library(FSelectorRcpp)
 library(catboost)
 
-# Processamento paralelo 
+# Parallel processing 
 doParallel::registerDoParallel(cores=20)
 parallel_stop()
 # Divisão dos conjuntos de dados em treinamento e teste.
