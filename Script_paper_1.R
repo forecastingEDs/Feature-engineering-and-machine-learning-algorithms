@@ -49,7 +49,7 @@ doParallel::registerDoParallel(cores=20)
 parallel_stop()
 
 ### Load Data ----
-### In this step you must import the data from the Excel spreadsheet to Rstudio keeping the original file name "atends_temperature_calendar" so that the next steps work correctly.
+### In this step you must import the data from the Excel spreadsheet to Rstudio keeping the original file name "datasets" so that the next steps work correctly.
 With Rstudio open, in the upper right corner you have the option/tab >import Dataset>from excel>Browse and select the "datasets"
 
 
