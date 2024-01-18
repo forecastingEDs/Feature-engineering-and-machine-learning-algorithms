@@ -38,10 +38,6 @@ data_tbl <- datasets %>%
 
 data_tbl
 
-
-
-
-
 # Displaying the data
 data_tbl
 
@@ -110,8 +106,6 @@ p + scale_colour_manual(
 ggplot(data = data_tbl, aes(x = id, y = attendences, fill=id)) +
   geom_boxplot() + labs(fill="EDs", x = "Daily data", y = "Arrivals by hospitals")
 
-# ...
-
 ## plot time series best form##
 
 data_tbl %>%
@@ -123,7 +117,6 @@ data_tbl %>%
 
 data_tbl %>%
   plot_time_series(Date, attendences, .color_var = id, .interactive = F, .smooth = F, .y_lab ="Arrivals by hospitals",  .x_lab = "Daily data", .title = "", .line_size = 0.8) 
-
 
 ## This worked for me with a windows 10 laptop in German, where I wanted i.e. lubridate to return dates in English:
 Sys.setlocale("LC_TIME", "English")
@@ -143,8 +136,6 @@ data_tbl %>%
     .interactive = FALSE
   )
 
-
-# ...
 
 # Summary Diagnostics. Check for summary of timeseries
 data_tbl <- datasets %>%
